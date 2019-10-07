@@ -14,10 +14,10 @@ int main(void)
     while (change < 1);
     
     int cents = round(change * 100);
-    printf("%i\n", cents); 
+    //printf("%i\n", cents); 
     
-    int mincoins = mincoins(cents);
-    //printf("%i\n", mincoins);
+    int cmincoins = mincoins(cents);
+    printf("%i\n", cmincoins);
 }
 
 int mincoins(int num1) {
