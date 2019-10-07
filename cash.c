@@ -11,7 +11,7 @@ int main(void)
     {
         change = get_float("Change owed ");
     } 
-    while (change > 1);
+    while (change < 0);
     
     int cents = round(change * 100);
     //printf("%i\n", cents); 
