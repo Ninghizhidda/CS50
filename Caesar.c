@@ -29,9 +29,23 @@ int main(int argc, string argv[])
         //printf("\n");
         string plaintext = get_string("plaintext: ");
         printf("ciphertext: ");
+        //char result = "";
         for (int i = 0, n = strlen(plaintext); i < n; i++)
         {
-            printf("%c", (plaintext[i] + k));
+            //printf("%i", ((plaintext[i] + k)));
+            //printf("%c", ((plaintext[i] + k) ));
+            //printf("%i", ((plaintext[i] + k) % 26));
+            //printf("%c", 20);
+            
+            // apply transformation to each character 
+            // Encrypt Uppercase letters 
+            if (isupper(plaintext[i])) 
+                printf("%c", (plaintext[i] + k - 65) % 26 +65);
+            else
+                printf("%c", (plaintext[i] + k - 97) % 26 +97);  
+
+            // Return the resulting string 
+            //printf("%c", result); 
         }
         printf("\n");
     }
